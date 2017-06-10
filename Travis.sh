@@ -9,7 +9,7 @@ while getopts "p:" OPTION 2> /dev/null; do
 			;;
 	esac
 done
-cp -r tests/plugins plugins
+cp -r tests/plugins .
 ls -R plugins
 "$PHP_BINARY" ./plugins/PocketMine-DevTools/src/DevTools/ConsoleScript.php --make ./plugins/PocketMine-DevTools --relative ./plugins/PocketMine-DevTools --out ./plugins/DevTools.phar
 rm -rf ./plugins/PocketMine-DevTools
